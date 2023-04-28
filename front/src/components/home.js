@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-// import axios from 'axios';
 import { Companies } from './companies'
 import { infos_company } from '../data/fake_data'
 import mapboxgl from 'mapbox-gl';
@@ -23,20 +22,11 @@ export function Home() {
     })
     const url = "http://localhost:8000/data/get"
     let clickCoords = {}
-//     const headers = {
-//         method: 'GET',
-//         mode: 'no-cors',
-//         headers: {'Content-Type':'application/json'}
-//     }
     
     useEffect(() => {
         fetch(url)
             .then(resp => resp.json())
             .then(data => {setData(data)})
-//         (async () => {
-//             const response = await axios.get("http://localhost:8000/data_form/", {headers});
-//             console.log(response.data.total);
-//         })()
     }, [])
 
     useEffect(() => {
@@ -48,24 +38,21 @@ export function Home() {
             zoom: zoom
         });
 
-        map.current.on('move', () => {
+        map.current.on('move', () => { // while moving map, update longitude latitude to display
             setLng(map.current.getCenter().lng.toFixed(4));
             setLat(map.current.getCenter().lat.toFixed(4));
             setZoom(map.current.getZoom().toFixed(2));
         });
 
-        map.current.on('click', e => {
+        map.current.on('click', e => { // when map is clicked, formular is dispalyed
             if (clickCoords.x !== e.point.x && clickCoords.y !== e.point.y) {
-                // SHOW FORMULAR
                 setDisplay_form(true)
                 clickCoords = {};
             }
-
         });
         
-//         console.log('data____', data);
         map.current.on('load', () => {
-            map.current.addSource('lieu', {
+            map.current.addSource('lieu', { // add map data
                 'type': 'geojson',
                 'data': data
             });
@@ -80,7 +67,7 @@ export function Home() {
                 }
             });
 
-            map.current.on('click', 'places', (e) => {
+            map.current.on('click', 'places', (e) => { // when flag is clicked company data is update
                 clickCoords = e.point;
                 const coordinates = e.features[0].geometry.coordinates.slice();
                 const description = e.features[0].properties.description;
@@ -108,6 +95,7 @@ export function Home() {
         });
     });
 
+    // go from a destination to another when a company in the list is clicked
     function fly_to(el) {
         map.current.flyTo({
             center: el.geometry.coordinates,
@@ -117,7 +105,8 @@ export function Home() {
         setDescription(el.properties.description)
     }
     
-    function popup() {
+    // display infos about company
+    function display_popup() {
         return (
             <div>
                 {description}
@@ -125,6 +114,7 @@ export function Home() {
         )
     }
 
+    // get input value from formular
     function handleChange(e) {
         let value = e.target.value
         set_data_form({
@@ -133,9 +123,9 @@ export function Home() {
         });
     }
     
+    // post data to django server
     function handleSubmit(e) {
         e.preventDefault()
-//         ENVOYER LE FORMULAIRE
         let url = 'http://localhost:8000/data/add'
         fetch(url, {
             method: 'POST',
@@ -154,9 +144,9 @@ export function Home() {
             }
         })
         .catch(error => console.log(error))
-//         cancel()
     }
 
+    // cancel formular
     function cancel() {
         set_data_form({
             name: '',
@@ -195,7 +185,7 @@ export function Home() {
                 <div ref={mapContainer} className="map-container" />
                 {/* <div ref={popUpRef}></div> */}
             </div>
-            {is_display_form ? display_form() : popup()}
+            {is_display_form ? display_form() : display_popup()}
             <Companies data={data} fly_to={fly_to} />
         </div>
     );
