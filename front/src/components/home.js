@@ -15,6 +15,12 @@ export function Home() {
     const [zoom, setZoom] = useState(9);
     const [description, setDescription] = useState('');
     const [data, setData] = useState('');
+    const [is_display_form, setDisplay_form] = useState(false);
+    const [data_form, set_data_form] = useState({
+        name: '',
+        description: '',
+        adress: ''
+    })
     //     const popUpRef = useRef(new mapboxgl.Popup({ offset: 15 }))
     let clickCoords = {}
     const url = "http://localhost:8000/data_form/"
@@ -24,7 +30,6 @@ export function Home() {
 //         headers: {'Content-Type':'application/json'}
 //     }
     
-
     useEffect(() => {
         fetch(url)
             .then(resp => resp.json())
@@ -53,7 +58,7 @@ export function Home() {
         map.current.on('click', e => {
             if (clickCoords.x !== e.point.x && clickCoords.y !== e.point.y) {
                 // SHOW FORMULAR
-
+                setDisplay_form(true)
                 clickCoords = {};
             }
 
@@ -102,7 +107,7 @@ export function Home() {
                 map.current.getCanvas().style.cursor = '';
             });
         });
-    }); 
+    });
 
     function fly_to(el) {
         map.current.flyTo({
@@ -121,6 +126,48 @@ export function Home() {
         )
     }
 
+    function handleChange(e) {
+        let value = e.target.value
+        set_data_form({
+            ...data_form,
+            [e.target.name]: value
+        });
+    }
+    
+    function handleSubmit() {
+
+    }
+
+    function cancel() {
+        set_data_form({
+            name: '',
+            description: '',
+            adress: ''
+        })
+        setDisplay_form(false)
+    }
+
+    function display_form() {
+        console.log(clickCoords);
+        return (
+            <div>
+                <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={handleSubmit}>
+                    <label>name
+                        <input className='form_input' type="text" name='name' onChange={handleChange}/>
+                    </label>
+                    <label>activity
+                        <input className='form_input' type="text" name='description' onChange={handleChange}/>
+                    </label>
+                    <label>adress
+                        <input className='form_input' type='text' name='adress' onChange={handleChange}/>
+                    </label>
+                </form>
+                <button className='form_input' onClick={cancel}>Annuler</button>
+                <button className='form_input'>Valider</button>
+            </div>
+        )
+    }
+
     return (
         <div style={{ display: 'flex', justifyContent: 'space-between', margin: '50px'}}>
             <div>
@@ -130,7 +177,7 @@ export function Home() {
                 <div ref={mapContainer} className="map-container" />
                 {/* <div ref={popUpRef}></div> */}
             </div>
-            {popup()}
+            {is_display_form ? display_form() : popup()}
             <Companies data={data} fly_to={fly_to} />
         </div>
     );
