@@ -21,9 +21,8 @@ export function Home() {
         description: '',
         adress: ''
     })
-    //     const popUpRef = useRef(new mapboxgl.Popup({ offset: 15 }))
+    const url = "http://localhost:8000/get_data/"
     let clickCoords = {}
-    const url = "http://localhost:8000/data_form/"
 //     const headers = {
 //         method: 'GET',
 //         mode: 'no-cors',
@@ -134,8 +133,17 @@ export function Home() {
         });
     }
     
-    function handleSubmit() {
-
+    function handleSubmit(e) {
+        e.preventDefault()
+//         ENVOYER LE FORMULAIRE
+//         let url = 'http://localhost:800/update_data/'
+//         fetch(url, {
+//             method: 'POST',
+//             headers: { 'Content-type': 'application/json' }
+//         })
+//         .then(response => cancel())
+//         .catch(error => console.log(error))
+        cancel()
     }
 
     function cancel() {
@@ -148,10 +156,9 @@ export function Home() {
     }
 
     function display_form() {
-        console.log(clickCoords);
         return (
             <div>
-                <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column'}}>
                     <label>name
                         <input className='form_input' type="text" name='name' onChange={handleChange}/>
                     </label>
@@ -161,9 +168,9 @@ export function Home() {
                     <label>adress
                         <input className='form_input' type='text' name='adress' onChange={handleChange}/>
                     </label>
+                    <button className='form_input' onClick={cancel}>Annuler</button>
+                    <button className='form_input'>Valider</button>
                 </form>
-                <button className='form_input' onClick={cancel}>Annuler</button>
-                <button className='form_input'>Valider</button>
             </div>
         )
     }
