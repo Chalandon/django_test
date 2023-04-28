@@ -17,7 +17,7 @@ REACT_APP_API_KEY='your access token'
 `pip install -r requirements.txt`
 
 ###### run server
-`python3 ./back/test_hyvilo/manage.py runserver`
+`python3 ./back/django_test/manage.py runserver`
 
 ---
 **note**
