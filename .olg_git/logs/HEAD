@@ -1,0 +1,31 @@
+0000000000000000000000000000000000000000 78201ffe1c28b20aa1ace869548b2edb76b36348 Edouard <lebourgeois.edouard@gmail.com> 1682412255 +0200	commit (initial): Initialize project using Create React App
+78201ffe1c28b20aa1ace869548b2edb76b36348 758313dea800a05967e1c00a93c69a0ee9ab6e6a Edouard <lebourgeois.edouard@gmail.com> 1682412658 +0200	commit: init my app
+758313dea800a05967e1c00a93c69a0ee9ab6e6a f9d977433257b30ace8ce1da82b71ac164caefed Edouard <lebourgeois.edouard@gmail.com> 1682412703 +0200	commit: add mapbox
+f9d977433257b30ace8ce1da82b71ac164caefed af5b55cd49d39ddf77dc2d5c203318dba855d230 Edouard <lebourgeois.edouard@gmail.com> 1682426788 +0200	commit: add mapbox
+af5b55cd49d39ddf77dc2d5c203318dba855d230 3ff0fe016f50a9ba7edc27e2bde929e72ebd7d46 Edouard <lebourgeois.edouard@gmail.com> 1682441839 +0200	commit: ignore .env
+3ff0fe016f50a9ba7edc27e2bde929e72ebd7d46 59b1b7a9fadab5efe244a89b5959b6d49f3a0e26 Edouard <lebourgeois.edouard@gmail.com> 1682441933 +0200	commit: add fake companies
+59b1b7a9fadab5efe244a89b5959b6d49f3a0e26 24c17f440a31ff4f630d58c38d04fa3cc837ab60 Edouard <lebourgeois.edouard@gmail.com> 1682495296 +0200	commit: add README
+24c17f440a31ff4f630d58c38d04fa3cc837ab60 f796b84f5db6d455c0d8f75a761ddee56df4c7e5 Edouard <lebourgeois.edouard@gmail.com> 1682495320 +0200	commit: add companies + map.fly_to features
+f796b84f5db6d455c0d8f75a761ddee56df4c7e5 8cbdad30c650d59de5aa4e77195b3d2798ae7a48 Edouard <lebourgeois.edouard@gmail.com> 1682515989 +0200	commit: ignore code exemple from mapbox
+8cbdad30c650d59de5aa4e77195b3d2798ae7a48 57f73b227116282a5aa520d391aeb2ae558a09db Edouard <lebourgeois.edouard@gmail.com> 1682516026 +0200	commit: add some step
+57f73b227116282a5aa520d391aeb2ae558a09db 469c187923fcf66832c112ca5a2ee3e09df11083 Edouard <lebourgeois.edouard@gmail.com> 1682516140 +0200	commit: shows the description that we click on the list company or on the map
+469c187923fcf66832c112ca5a2ee3e09df11083 469c187923fcf66832c112ca5a2ee3e09df11083 Edouard <lebourgeois.edouard@gmail.com> 1682584351 +0200	reset: moving to HEAD
+469c187923fcf66832c112ca5a2ee3e09df11083 4cb6811c8d6e017a1ff71de25c4f24b272b2223f Edouard <lebourgeois.edouard@gmail.com> 1682584475 +0200	commit: create front folder
+4cb6811c8d6e017a1ff71de25c4f24b272b2223f 0ab4a7ef4d2f1141619a8740f5cf7370d22e9c32 Edouard <lebourgeois.edouard@gmail.com> 1682584504 +0200	commit: create back folder
+0ab4a7ef4d2f1141619a8740f5cf7370d22e9c32 8cc37e9f35e7f77363fe2bb96609942d03ecac56 Edouard <lebourgeois.edouard@gmail.com> 1682607039 +0200	commit: add some steps
+8cc37e9f35e7f77363fe2bb96609942d03ecac56 e04fd25cee19fabd13032083cb3ac0a73245cd7b Edouard <lebourgeois.edouard@gmail.com> 1682615164 +0200	commit: log data from django api
+e04fd25cee19fabd13032083cb3ac0a73245cd7b e04fd25cee19fabd13032083cb3ac0a73245cd7b Edouard <lebourgeois.edouard@gmail.com> 1682622285 +0200	reset: moving to HEAD
+e04fd25cee19fabd13032083cb3ac0a73245cd7b d95ce0d3076be1e2d5afcb1d24f5e25809bbbed1 Edouard <lebourgeois.edouard@gmail.com> 1682622316 +0200	commit: add issue
+d95ce0d3076be1e2d5afcb1d24f5e25809bbbed1 fd763f98965306ab4a65b3f5dd645d773ea748f4 Edouard <lebourgeois.edouard@gmail.com> 1682622417 +0200	commit: prevent from empty string
+fd763f98965306ab4a65b3f5dd645d773ea748f4 9302839207f1fe01ef23be53e7f127e6c70e8d86 Edouard <lebourgeois.edouard@gmail.com> 1682622439 +0200	commit: add data from server
+9302839207f1fe01ef23be53e7f127e6c70e8d86 311e6a001111b9826f6d352ed2439492c287d903 Edouard <lebourgeois.edouard@gmail.com> 1682622507 +0200	commit: ignore help folder recursivly
+311e6a001111b9826f6d352ed2439492c287d903 0ab6ac61f0f37d618f8ccec2573184d5218d3fb7 Edouard <lebourgeois.edouard@gmail.com> 1682663812 +0200	commit: create two useEffect, one for mount, one for update
+0ab6ac61f0f37d618f8ccec2573184d5218d3fb7 b3714adfa3d2e924b9300af09f0dfccde3e54c0c Edouard <lebourgeois.edouard@gmail.com> 1682663846 +0200	commit: rename folder
+b3714adfa3d2e924b9300af09f0dfccde3e54c0c 0000000000000000000000000000000000000000 Edouard <lebourgeois.edouard@gmail.com> 1682664096 +0200	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 b3714adfa3d2e924b9300af09f0dfccde3e54c0c Edouard <lebourgeois.edouard@gmail.com> 1682664096 +0200	Branch: renamed refs/heads/master to refs/heads/main
+b3714adfa3d2e924b9300af09f0dfccde3e54c0c 0000000000000000000000000000000000000000 Edouard <lebourgeois.edouard@gmail.com> 1682664122 +0200	Branch: renamed refs/heads/main to refs/heads/master
+0000000000000000000000000000000000000000 b3714adfa3d2e924b9300af09f0dfccde3e54c0c Edouard <lebourgeois.edouard@gmail.com> 1682664122 +0200	Branch: renamed refs/heads/main to refs/heads/master
+b3714adfa3d2e924b9300af09f0dfccde3e54c0c 0000000000000000000000000000000000000000 Edouard <lebourgeois.edouard@gmail.com> 1682664622 +0200	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 b3714adfa3d2e924b9300af09f0dfccde3e54c0c Edouard <lebourgeois.edouard@gmail.com> 1682664622 +0200	Branch: renamed refs/heads/master to refs/heads/main
+b3714adfa3d2e924b9300af09f0dfccde3e54c0c 0000000000000000000000000000000000000000 Edouard <lebourgeois.edouard@gmail.com> 1682664638 +0200	Branch: renamed refs/heads/main to refs/heads/master
+0000000000000000000000000000000000000000 b3714adfa3d2e924b9300af09f0dfccde3e54c0c Edouard <lebourgeois.edouard@gmail.com> 1682664638 +0200	Branch: renamed refs/heads/main to refs/heads/master

@@ -1,0 +1,8 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@framagit.org:Kokkiri/react_django.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
