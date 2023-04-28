@@ -49,3 +49,6 @@ def get_data(request):
     }
     return Response(data)
 
+@api_view(['POST'])
+def add_data(request):
+    return Response(request)

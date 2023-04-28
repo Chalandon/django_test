@@ -21,7 +21,7 @@ export function Home() {
         description: '',
         adress: ''
     })
-    const url = "http://localhost:8000/get_data/"
+    const url = "http://localhost:8000/data/get"
     let clickCoords = {}
 //     const headers = {
 //         method: 'GET',
@@ -136,14 +136,25 @@ export function Home() {
     function handleSubmit(e) {
         e.preventDefault()
 //         ENVOYER LE FORMULAIRE
-//         let url = 'http://localhost:800/update_data/'
-//         fetch(url, {
-//             method: 'POST',
-//             headers: { 'Content-type': 'application/json' }
-//         })
-//         .then(response => cancel())
-//         .catch(error => console.log(error))
-        cancel()
+        let url = 'http://localhost:8000/data/add'
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({'name': 'toto'})
+        })
+        .then(response => {
+            console.log(response)
+            if (response.status == 500) {
+                alert('ERROR 500')
+            }
+            if (response.status == 200) {
+                alert('Validated')
+            }
+        })
+        .catch(error => console.log(error))
+//         cancel()
     }
 
     function cancel() {
