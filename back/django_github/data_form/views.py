@@ -9,9 +9,9 @@ def index(request):
             {
                 "type": 'Feature',
                 "properties": {
-                    "title": 'company_besançon',
+                    "title": 'company_1',
                     "description":
-                        'Je suis une entreprise à Besançon',
+                        'Toto company',
                     "icon": 'castle'
                 },
                 "geometry": {
@@ -22,27 +22,27 @@ def index(request):
             {
                 "type": 'Feature',
                 "properties": {
-                    "title": 'company_dijon',
+                    "title": 'company_2',
                     "description":
-                        'Je suis une entreprise à Dijon',
+                        'Gege studio',
                     "icon": 'castle'
                 },
                 "geometry": {
                     "type": 'Point',
-                    "coordinates": [5.07, 47.3228]
+                    "coordinates": [6.2, 47.2]
                 }
             },
             {
                 "type": 'Feature',
                 "properties": {
-                    "title": 'company_dole',
+                    "title": 'company_3',
                     "description":
-                        'Je suis une entreprise à Dole',
+                        'Maeva society',
                     "icon": 'castle'
                 },
                 "geometry": {
                     "type": 'Point',
-                    "coordinates": [5.49, 47.11]
+                    "coordinates": [6.2, 47.3]
                 }
             }
         ]
