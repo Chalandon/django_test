@@ -33,3 +33,5 @@ CORS_ALLOWED_ORIGINS = [
 ###### home.js:63 map.on.load load before data be fetched
 flag on map work if we replace `data` by `infos_company`
 but this is not data from server
+
+###### post method not working yet
