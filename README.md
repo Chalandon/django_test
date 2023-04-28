@@ -30,14 +30,6 @@ CORS_ALLOWED_ORIGINS = [
 
 ---
 #### issue
-###### home.js:5 expected '!' error using with import
-https://stackoverflow.com/questions/45443274/webpack-2-expected-error-using-with-import/45447398#45447398
-in `.eslintrc` file
-```
-"rules": {
-  "import/no-webpack-loader-syntax": "off"
-}
-```
 ###### home.js:63 map.on.load load before data be fetched
 flag on map work if we replace `data` by `infos_company`
 but this is not data from server
