@@ -24,7 +24,7 @@ def get_data(request):
                 "properties": {
                     "name": 'Gege studio',
                     "description": 'Un studio génial qui fait des trucs',
-                    "adress": '25056 Besançon, 23 bd St Germain',
+                    "adress": 'Naisey-les-Granges 25360, 23 bd St Germain',
                     "icon": 'castle'
                 },
                 "geometry": {
@@ -37,7 +37,7 @@ def get_data(request):
                 "properties": {
                     "name": 'Maeva society',
                     "description": 'une société aux ambitions de Maeva',
-                    "adress": '25056 Besançon, 6 rue Marceau',
+                    "adress": '25360 Champlive, 6 rue Marceau',
                     "icon": 'castle'
                 },
                 "geometry": {
