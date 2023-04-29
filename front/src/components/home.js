@@ -77,11 +77,10 @@ export function Home() {
                     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
                 }
 
-//                 setDescription(description)
                 set_data_form({
-                    'name': name,
-                    'description': description,
-                    'adress': adress
+                    name: name,
+                    description: description,
+                    adress: adress
 
                 })
     //             new mapboxgl.Popup()
@@ -143,7 +142,8 @@ export function Home() {
         fetch(url, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json'
+                'Content-Type': 'application/json',
+//                 'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify({'name': 'toto'})
         })
