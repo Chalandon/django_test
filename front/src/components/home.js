@@ -12,7 +12,6 @@ export function Home() {
     const [lng, setLng] = useState(6);
     const [lat, setLat] = useState(47.24);
     const [zoom, setZoom] = useState(9);
-    const [description, setDescription] = useState('');
     const [data, setData] = useState('');
     const [is_display_form, setDisplay_form] = useState(false);
     const [data_form, set_data_form] = useState({
@@ -70,13 +69,21 @@ export function Home() {
             map.current.on('click', 'places', (e) => { // when flag is clicked company data is update
                 clickCoords = e.point;
                 const coordinates = e.features[0].geometry.coordinates.slice();
+                const name = e.features[0].properties.name;
                 const description = e.features[0].properties.description;
+                const adress = e.features[0].properties.adress;
 
                 while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
                 }
 
-                setDescription(description)
+//                 setDescription(description)
+                set_data_form({
+                    'name': name,
+                    'description': description,
+                    'adress': adress
+
+                })
     //             new mapboxgl.Popup()
     //                 .setLngLat(coordinates)
     //                 .setHTML(description)
@@ -102,14 +109,20 @@ export function Home() {
             zoom: 10,
             essential: true
         });
-        setDescription(el.properties.description)
+        set_data_form({
+            "name": el.properties.name,
+            "description": el.properties.description,
+            "adress": el.properties.adress
+        })
     }
     
     // display infos about company
     function display_popup() {
         return (
             <div>
-                {description}
+                <strong>{data_form.name}</strong>
+                <p>{data_form.description}</p>
+                <p>{data_form.adress}</p>
             </div>
         )
     }

@@ -9,9 +9,9 @@ def get_data(request):
             {
                 "type": 'Feature',
                 "properties": {
-                    "title": 'company_1',
-                    "description":
-                        'Toto company',
+                    "name": 'Toto company',
+                    "description": 'une entreprise qui fabrique des trucs',
+                    "adress": '25056 Besançon, 3 rue Pasteur',
                     "icon": 'castle'
                 },
                 "geometry": {
@@ -22,9 +22,9 @@ def get_data(request):
             {
                 "type": 'Feature',
                 "properties": {
-                    "title": 'company_2',
-                    "description":
-                        'Gege studio',
+                    "name": 'Gege studio',
+                    "description": 'Un studio génial qui fait des trucs',
+                    "adress": '25056 Besançon, 23 bd St Germain',
                     "icon": 'castle'
                 },
                 "geometry": {
@@ -35,9 +35,9 @@ def get_data(request):
             {
                 "type": 'Feature',
                 "properties": {
-                    "title": 'company_3',
-                    "description":
-                        'Maeva society',
+                    "name": 'Maeva society',
+                    "description": 'une société aux ambitions de Maeva',
+                    "adress": '25056 Besançon, 6 rue Marceau',
                     "icon": 'castle'
                 },
                 "geometry": {

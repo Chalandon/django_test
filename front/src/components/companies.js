@@ -3,7 +3,7 @@ export function Companies({data, fly_to}) {
     function display_list_companies() {
         if (data) {
             return data.features.map(
-                el => <li onClick={fly_to.bind(null, el)} key={el.properties.title} >{el.properties.title}</li>
+                el => <li onClick={fly_to.bind(null, el)} key={el.properties.name} >{el.properties.name}</li>
             )
         }
     }
